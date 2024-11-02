@@ -1,0 +1,775 @@
+/* =================================
+|      * Global Base Styles *       |
+================================= */
+
+/* Font Face Declarations */
+@font-face {
+    font-family: 'Aldrich';
+    src: url('../assets/path-to-fonts/aldrich-regular-webfont.woff2') format('woff2'),
+         url('../assets/path-to-fonts/aldrich-regular-webfont.woff') format('woff'),
+         url('../assets/path-to-fonts/Aldrich-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SovjetBox';
+    src: url('../../assets/path-to-fonts/sovjetboxbd_v0_9-webfont.woff') format('woff'),
+         url('../../assets/path-to-fonts/SovjetBoxBd_v0_9.otf') format('opentype');
+}
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Content Layout */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #060512; /* Background aligned with branding */
+    color: #f4f6f7; /* Text color for readability */
+    line-height: 1.7;
+}
+
+/* Full-width setup for sections */
+section {
+    width: 100%; 
+    padding: 40px 0;
+    overflow-x: hidden;
+    background: #1B1B1F; /* Darker shade for sections */
+    border-top: 1px solid #0EAFFB;
+}
+
+/* Global Layout for Body */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Newsreader', serif;
+    font-size: 18px; /* Slightly increased for readability */
+    background-color: #060512;
+    color: #f4f6f7;
+    line-height: 1.8;
+}
+
+/* Optional: Centered content with constrained width inside each section */
+.section-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#industries, #innovation, #portfolio, #contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Modal Styles */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Darker overlay */
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #1B1B1F;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #0EAFFB;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    color: #f4f6f7;
+    font-family: 'Newsreader', serif;
+    line-height: 1.7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #0EAFFB;
+}
+
+/* Adjusting Font Sizes for Better Readability */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Aldrich', sans-serif;
+    color: #0EAFFB;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+/* ===========================
+|     * Hero Section Styles *    |
+=========================== */
+header {
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #060512; /* Dark background aligned with brand */
+}
+
+.hero video {
+    width: 100%;
+    max-width: 1400px; /* Slightly increased for full-screen alignment */
+    margin: 0 auto;
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #f4f6f7;
+}
+
+.hero-content h1 {
+    font-family: 'SovjetBox', sans-serif;
+    font-size: 56px; /* Slightly increased for hero prominence */
+    font-weight: bold;
+    color: #c9ced1; /* Brand blue */
+    margin: 10px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Subtle shadow for contrast */
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: #c9ced1; /* Lightened for readability */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* =================================
+|        * Heading Styles *         |
+================================= */
+
+h2 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 38px;
+    font-weight: 600;
+    color: #0EAFFB; /* Brand blue */
+    margin: 40px 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #0EAFFB;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: #f4f6f7;
+    margin-bottom: 20px;
+}
+
+/* Service Card & Slider Item Headings */
+.service-card h3,
+.slider-item h3 {
+    font-size: 24px;
+    color: #0EAFFB;
+    font-family: 'Aldrich', sans-serif;
+    transition: color 0.3s ease;
+    margin-top: 0;
+}
+
+.service-card:hover h3,
+.slider-item:hover h3 {
+    color: #274d8c; /* Slightly darker blue on hover */
+}
+
+/* =================================
+|           * Logo Styles *         |
+================================= */
+.logo {
+    max-width: 220px; /* Slightly larger for more prominence */
+    margin-bottom: 15px;
+}
+
+/* =================================
+|      * Section 1 - Services *     |
+================================= */
+#services {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(180deg, #060512, #0E1730); /* Updated gradient for consistency */
+}
+
+#services h2 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 40px; /* Increased for stronger hierarchy */
+    color: #f4f6f7;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #0EAFFB; /* Subtle underline */
+    padding-bottom: 10px;
+}
+
+.service-cards-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.service-card {
+    background-color: #0B0A18;
+    color: #f4f6f7;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly larger shadow */
+    width: calc(33.333% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.service-card h3 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 28px; /* Increased heading size */
+    color: #0EAFFB;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 18px; /* Larger text for readability */
+    color: #c9ced1;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #f4f6f7;
+    color: #0B0A18;
+}
+
+.service-card:hover h3, .service-card:hover p {
+    color: #060512;
+}
+
+/* Section Background with Gradient Divider */
+.deep-navy-gradient {
+    position: relative;
+    background: linear-gradient(180deg, #060512, #0E1730);
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+
+.deep-navy-gradient::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #0EAFFB, #274d8c);
+    z-index: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .service-cards-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card {
+        width: 100%;
+    }
+}
+
+/* =================================
+|      * Section 2 - Industries *   |
+================================= */
+#industries {
+    text-align: center;
+    color: #f4f6f7;
+    font-family: 'Aldrich', sans-serif;
+    padding: 60px 20px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.card {
+    position: relative;
+    width: 23%; /* Four items per row on large screens */
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #060512;
+    border: 1px solid #4a4a4a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    font-family: 'Aldrich', sans-serif;
+    text-align: center;
+    color: #f4f6f7;
+    box-sizing: border-box; /* Ensures consistent sizing */
+}
+
+.icon {
+    font-size: 2.8em;
+    color: #0EAFFB;
+    background-color: #f4f6f7;
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card h3 {
+    font-size: 26px;
+    color: #f4f6f7;
+    margin: 15px 0;
+}
+
+.card-text {
+    font-size: 18px;
+    color: #c9ced1;
+    display: none;
+    margin-top: 10px;
+    font-family: 'Newsreader', sans-serif;
+}
+
+button.read-more {
+    margin-top: 20px;
+    padding: 10px 18px;
+    color: #0EAFFB;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: none;
+    font-weight: 500;
+    font-family: 'Aldrich', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button.read-more:focus {
+    outline: 2px solid #0EAFFB;
+}
+
+.card:hover {
+    background-color: #f4f6f7;
+    color: #060512;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .icon {
+    background-color: #0EAFFB;
+    color: #f4f6f7;
+}
+
+.card:hover h3, .card:hover p, .card:hover button.read-more {
+    color: #0EAFFB;
+}
+
+button.read-more:hover {
+    background-color: #d7dbdd;
+    color: #0EAFFB;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card.expanded .card-text {
+    display: block;
+    color: #060512;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .card {
+        width: 48%; /* Two items per row for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 100%; /* Single item per row for small screens */
+    }
+}
+/* =================================
+|      * Section 3 Styles *         |
+================================= */
+
+/* Innovation Section Styles */
+#innovation {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(180deg, #060512, #0E1730); /* Deep Navy Gradient */
+}
+
+#innovation h2 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 36px; /* Increased for hierarchy */
+    color: #f4f6f7; /* Off White */
+    margin-bottom: 25px;
+    border-bottom: 2px solid #0EAFFB; /* Subtle underline for emphasis */
+    padding-bottom: 8px;
+}
+
+.text-constrained {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #c9ced1; /* Slightly brighter Light Grey */
+    font-size: 18px; /* Consistent font size */
+}
+
+/* Media Showcase */
+.media-showcase {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Increased gap for spacing */
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.media-item {
+    width: calc(33.333% - 20px);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Icon Circle Style */
+.icon-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    background-color: #0EAFFB; /* Circle color (Logo Blue) */
+    border-radius: 50%;
+    color: #060512;
+    font-size: 2.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-circle:hover {
+    background-color: #f4f6f7;
+    transform: scale(1.1);
+    color: #0EAFFB;
+}
+
+/* Hover Effect */
+.media-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.media-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .media-showcase {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .media-item {
+        width: 100%;
+    }
+}
+
+/* =================================
+|      * Section 4 - Portfolio *    |
+================================= */
+
+/* Portfolio Section */
+#portfolio {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(180deg, #060512, #0E1730);
+}
+
+#portfolio h2 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 36px;
+    color: #f4f6f7;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #0EAFFB;
+    padding-bottom: 8px;
+}
+
+.text-constrained {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #c9ced1;
+    font-size: 18px;
+}
+
+/* Portfolio Slider Layout */
+.portfolio-slider {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.slider-item {
+    background-color: #0B0A18;
+    color: #f4f6f7;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: calc(33.333% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-family: 'Aldrich', sans-serif;
+}
+
+.slider-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.slider-item p {
+    font-size: 18px;
+    color: #c9ced1;
+}
+
+/* Hover Effects */
+.slider-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #f4f6f7;
+    color: #0B0A18;
+}
+
+.slider-item:hover img {
+    transform: scale(1.05);
+}
+
+.slider-item:hover p {
+    color: #060512;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .portfolio-slider {
+        flex-direction: column;
+        align-items: center;
+    }
+    .slider-item {
+        width: 100%;
+    }
+}
+
+/* ===========================
+   * Contact Section Styles *   
+=========================== */
+
+.contact-section-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 20px; /* Increased padding for more emphasis */
+    background: linear-gradient(180deg, #060512, #0E1730); /* Deep Navy Gradient */
+}
+
+#contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    gap: 30px; /* Slightly increased for spacing */
+    flex-wrap: wrap;
+}
+
+/* Contact Left (Image Section) */
+.contact-left {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.contact-left img {
+    max-width: 100%;
+    transition: transform 0.3s ease;
+    opacity: 0.85; /* Softer look */
+}
+
+/* Contact Right (Card Section) */
+.contact-right {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.contact-right .card-container {
+    background-color: #0B0A18;
+    padding: 30px; /* Increased for more balance */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card-content h2 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 30px; /* Slightly larger for importance */
+    color: #0EAFFB; /* Logo Blue */
+    margin-bottom: 25px;
+    border-bottom: 2px solid #0EAFFB; /* Subtle underline for emphasis */
+    padding-bottom: 10px;
+}
+
+.card-content p {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 18px; /* Increased font size for readability */
+    color: #c9ced1; /* Brightened Light Grey */
+    margin-bottom: 25px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 16px;
+    padding: 12px 25px;
+    color: #f4f6f7;
+    background-color: #0EAFFB;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #f4f6f7;
+    color: #0B0A18;
+    transform: translateY(-3px);
+}
+
+/* Hover Effect for Card */
+.card-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect for Image */
+.contact-left img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #contact {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-left, .contact-right {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .contact-left img {
+        max-width: 200px;
+    }
+}
+
+/* =================================
+|         * Footer Styles *         |
+================================= */
+footer {
+    background-color: #060512;
+    padding: 50px 20px;
+    text-align: center;
+    color: #f4f6f7;
+    width: 100%;
+}
+
+footer p {
+    margin: 0 0 15px;
+    color: #c9ced1;
+    font-size: 16px;
+}
+
+footer nav {
+    font-size: 16px;
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 1.8;
+}
+
+footer nav a {
+    color: #0EAFFB;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+footer nav a:hover {
+    color: #f4f6f7;
+    text-decoration: underline;
+}
