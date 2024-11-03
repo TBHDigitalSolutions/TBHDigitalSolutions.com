@@ -43,8 +43,5 @@ Thumbs.db
 vendor/
 cookieconsent-master/
 
-# Ignore public directory contents if not needed
-public/
-
 # Node modules (if you have any node dependencies in the future)
 node_modules/

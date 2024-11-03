@@ -361,6 +361,35 @@ h3 {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.icon, .icon-circle {
+    display: inline-flex; /* Ensure they're displayed inline and centered */
+    visibility: visible;
+    opacity: 1;
+}
+
+.icon, .icon-circle {
+    z-index: 10; /* Or higher if needed to appear in front of other elements */
+}
+/* Icon Circle Style */
+.icon-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    background-color: #0EAFFB; /* Circle color (Logo Blue) */
+    border-radius: 50%;
+    color: #060512;
+    font-size: 2.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-circle:hover {
+    background-color: #f4f6f7;
+    transform: scale(1.1);
+    color: #0EAFFB;
+}
+
 .card h3 {
     font-size: 26px;
     color: #f4f6f7;
@@ -484,26 +513,6 @@ button.read-more:hover {
     height: auto;
     display: block;
     transition: transform 0.3s ease;
-}
-
-/* Icon Circle Style */
-.icon-circle {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 65px;
-    height: 65px;
-    background-color: #0EAFFB; /* Circle color (Logo Blue) */
-    border-radius: 50%;
-    color: #060512;
-    font-size: 2.2em;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.icon-circle:hover {
-    background-color: #f4f6f7;
-    transform: scale(1.1);
-    color: #0EAFFB;
 }
 
 /* Hover Effect */

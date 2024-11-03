@@ -14,12 +14,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/home-styles.css">
     <link rel="stylesheet" href="/form/css/form-styles.css"> <!-- Link to form styles -->
 
     <!-- JS -->
     <script src="js/home-scripts.js" defer></script>
+    
+    <!-- Ionicons Library for Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -269,9 +276,15 @@
         </nav>
     </footer>
 
-    <!-- Scripts -->
-    <script src="/form/js/form-scripts.js" defer></script> <!-- JavaScript for Form Modal Functionality -->
+    
+    <!-- JavaScript Files -->
+    <script src="js/home-scripts.js" defer></script>
+    <script src="form/js/form-scripts.js" defer></script>
 
+    <!-- CookieConsent JS -->
+    <script type="module" src="config/cookieconsent-config.js"></script>
+
+    <!-- Contact Form and Modal Scripts -->
     <script>
         // Show modal on button click
         document.getElementById("open-contact-form").addEventListener("click", function() {
@@ -299,7 +312,7 @@
             }
         });
 
-        // Consent checkbox validation
+        // Consent checkbox validation for form submission
         document.getElementById("contactForm").addEventListener("submit", function(event) {
             const consentCheckbox = document.getElementById("consent");
             if (!consentCheckbox.checked) {
@@ -308,8 +321,5 @@
             }
         });
     </script>
-
-        <!-- CookieConsent JS -->
-        <script type="module" src="cookieconsent-config.js"></script>
 </body>
 </html>
