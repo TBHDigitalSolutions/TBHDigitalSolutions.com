@@ -222,31 +222,35 @@
                 <p>Explore some of the impactful projects we’ve delivered for our clients, each tailored to their specific needs and goals.</p>
             </div>
 
-            <!-- Video Section with Fallback Image -->
-            <div class="portfolio-video" style="background-image: url('../../assets/images/portfolio-fallback.jpg'); background-size: cover; background-position: center;">
-                <video autoplay muted loop id="portfolio-video" onerror="this.style.display='none';">
-                    <source src="../../assets/videos/portfolio-preview.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-
-            <!-- Portfolio Slider Section -->
-            <div class="portfolio-slider">
+            <section class="portfolio-slider">
+                <!-- Slider Item 1 -->
                 <div class="slider-item">
-                    <img src="../../assets/images/600x400-web site holder.png" alt="Project 1">
-                    <p>Custom Website Development for Client X</p>
+                    <video class="portfolio-video" loop autoplay muted playsinline poster="../../assets/images/600x400-web site holder.png">
+                        <source src="../../assets/videos/website-development.mp4" type="video/mp4">
+                        <img src="../../assets/images/600x400-web site holder.png" alt="Custom Website Development">
+                    </video>
+                    <p>Custom Website Development and Design</p>
                 </div>
+            
+                <!-- Slider Item 2 -->
                 <div class="slider-item">
-                    <img src="../../assets/images/600x400-web site holder.png" alt="Project 2">
-                    <p>Video Production and Social Media Campaign for Client Y</p>
+                    <video class="portfolio-video" loop autoplay muted playsinline poster="../../assets/images/600x400-web site holder.png">
+                        <source src="../../assets/videos/video-production.mp4" type="video/mp4">
+                        <img src="../../assets/images/600x400-web site holder.png" alt="Video Production and Social Media Campaign">
+                    </video>
+                    <p>Video Production and Social Media Strategy</p>
                 </div>
+            
+                <!-- Slider Item 3 -->
                 <div class="slider-item">
-                    <img src="../../assets/images/600x400-web site holder.png" alt="Project 3">
-                    <p>Advanced CRM Integration and Marketing Automation</p>
+                    <video class="portfolio-video" loop autoplay muted playsinline poster="../../assets/images/600x400-web site holder.png">
+                        <source src="../../assets/videos/crm-integration.mp4" type="video/mp4">
+                        <img src="../../assets/images/600x400-web site holder.png" alt="CRM Integration and Marketing Automation">
+                    </video>
+                    <p>CRM Integration and Marketing Automation</p>
                 </div>
-            </div>
-        </section>
-
+            </section>
+            
         <!-- Contact Section -->
         <section id="contact" class="contact-bg section-padding">
             <div class="contact-left">
@@ -278,7 +282,6 @@
 
     
     <!-- JavaScript Files -->
-    <script src="js/home-scripts.js" defer></script>
     <script src="form/js/form-scripts.js" defer></script>
 
     <!-- CookieConsent JS -->
