@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TBH Digital Solutions</title>
-
+    
+    <!-- CookieConsent CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0/dist/cookieconsent.css">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +25,8 @@
 <body>
     <!-- Header / Hero Section -->
     <header>
-        <div class="hero">
-            <video autoplay muted loop id="hero-video">
+        <div class="hero" style="background-image: url('../assets/images/fallback-image.jpg'); background-size: cover; background-position: center;">
+            <video autoplay muted loop id="hero-video" onerror="this.style.display='none';">
                 <source src="../../assets/videos/natoli-europe-2022.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -36,7 +39,7 @@
     </header>
 
     <!-- Modal Structure -->
-    <div id="popup-modal" class="modal" aria-hidden="true" aria-labelledby="contactFormTitle">
+    <div id="popup-modal" class="modal" style="display: none;" aria-hidden="true" aria-labelledby="contactFormTitle">
         <div class="modal-content">
             <div class="modal-header">
                 <img src="../assets/images/FullLogo_Transparent_NoBuffer.png" alt="TBH Digital Solutions Logo">
@@ -61,7 +64,7 @@
                         <button type="button" class="next-step">Next</button>
                     </div>
                 </fieldset>
-
+                
                 <!-- Step 2: Reason for Contact -->
                 <fieldset class="step" id="step-2" data-step="2">
                     <h2>What Can We Help You With?</h2>
@@ -116,6 +119,15 @@
                     <h2>Almost Done!</h2>
                     <label for="notes">Additional Notes</label>
                     <textarea id="notes" name="notes" rows="5" placeholder="Any specific requirements or additional information"></textarea>
+
+                    <!-- Consent Checkbox -->
+                    <div class="consent">
+                        <label for="consent">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            I consent to being contacted by TBH Digital Solutions. I have read and agree to the 
+                            <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>.
+                        </label>
+                    </div>
 
                     <div class="button-container">
                         <button type="button" class="prev-step">Back</button>
@@ -202,6 +214,16 @@
             <div class="text-constrained">
                 <p>Explore some of the impactful projects we’ve delivered for our clients, each tailored to their specific needs and goals.</p>
             </div>
+
+            <!-- Video Section with Fallback Image -->
+            <div class="portfolio-video" style="background-image: url('../../assets/images/portfolio-fallback.jpg'); background-size: cover; background-position: center;">
+                <video autoplay muted loop id="portfolio-video" onerror="this.style.display='none';">
+                    <source src="../../assets/videos/portfolio-preview.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Portfolio Slider Section -->
             <div class="portfolio-slider">
                 <div class="slider-item">
                     <img src="../../assets/images/600x400-web site holder.png" alt="Project 1">
@@ -239,20 +261,19 @@
         <p>&copy; 2024 TBH Digital Solutions. ALL RIGHTS RESERVED.</p>
         <nav>
             <a href="#feedback">SEND US FEEDBACK</a> |
-            <a href="#privacy">PRIVACY POLICY</a> |
-            <a href="#data">HOW WE USE YOUR DATA</a> |
-            <a href="#california">DO NOT SELL MY PERSONAL INFORMATION</a> |
-            <a href="#terms">TERMS AND CONDITIONS</a> |
+            <a href="/privacy-policy.html">PRIVACY POLICY</a> |
+            <a href="/privacy-policy.html">HOW WE USE YOUR DATA</a> |
+            <a href="/privacy-policy.html">DO NOT SELL MY PERSONAL INFORMATION</a> |
+            <a href="/terms.html">TERMS AND CONDITIONS</a> |
             <a href="https://tbhdigitalsolutions.com">BUILT BY TBH DIGITAL SOLUTIONS</a>
         </nav>
     </footer>
 
     <!-- Scripts -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="/form/js/form-scripts.js" defer></script> <!-- JavaScript for Form Modal Functionality -->
 
     <script>
+        // Show modal on button click
         document.getElementById("open-contact-form").addEventListener("click", function() {
             const modal = document.getElementById("popup-modal");
             modal.style.display = "block";
@@ -260,6 +281,7 @@
             document.body.classList.add("no-scroll");
         });
 
+        // Close modal on close button click
         document.querySelector(".close-button").addEventListener("click", function() {
             const modal = document.getElementById("popup-modal");
             modal.style.display = "none";
@@ -267,6 +289,7 @@
             document.body.classList.remove("no-scroll");
         });
 
+        // Close modal on outside click
         window.addEventListener("click", function(event) {
             const modal = document.getElementById("popup-modal");
             if (event.target === modal) {
@@ -275,6 +298,18 @@
                 document.body.classList.remove("no-scroll");
             }
         });
+
+        // Consent checkbox validation
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            const consentCheckbox = document.getElementById("consent");
+            if (!consentCheckbox.checked) {
+                alert("You must consent to be contacted before submitting.");
+                event.preventDefault();
+            }
+        });
     </script>
+
+        <!-- CookieConsent JS -->
+        <script type="module" src="cookieconsent-config.js"></script>
 </body>
-</html>        
+</html>

@@ -1,0 +1,50 @@
+.vercel
+# Ignore the .vercel directory (Vercel project configuration)
+.vercel
+
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+/.pnp
+.pnp.js
+
+# Build files
+dist/
+build/
+out/
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Ignore OS or IDE-specific files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Ignore Vercel project directory and config files
+.vercel
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Vendor or other external libraries
+vendor/
+cookieconsent-master/
+
+# Ignore public directory contents if not needed
+public/
+
+# Node modules (if you have any node dependencies in the future)
+node_modules/

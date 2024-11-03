@@ -543,16 +543,16 @@ button.read-more:hover {
     font-family: 'Aldrich', sans-serif;
     font-size: 36px;
     color: #f4f6f7;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     border-bottom: 2px solid #0EAFFB;
     padding-bottom: 8px;
 }
 
 .text-constrained {
     max-width: 800px;
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
     color: #c9ced1;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* Portfolio Slider Layout */
@@ -561,7 +561,7 @@ button.read-more:hover {
     justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .slider-item {
