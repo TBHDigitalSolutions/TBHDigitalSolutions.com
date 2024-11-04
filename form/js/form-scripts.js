@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         function openModal() {
-            modal.style.display = 'block';
+            modal.style.display = 'flex';
+            modal.style.alignItems = 'center';   // Center vertically
+            modal.style.justifyContent = 'center'; // Center horizontally
             modal.setAttribute('aria-hidden', 'false');
             document.body.classList.add('no-scroll');
             closeButton.focus();

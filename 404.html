@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <meta name="description" content="404 - Page Not Found | TBH Digital Solutions">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&family=Aldrich&display=swap">
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===========================
+           * Error Page Styles *
+        =========================== */
+        body {
+            font-family: 'Newsreader', serif;
+            background-color: #1B1B1F;
+            color: #F4F6F7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .error-page {
+            display: flex;
+            align-items: center;
+            max-width: 900px;
+            width: 90%;
+            background-color: #1B1B1F;
+            border: 2px solid #0EAFFB;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .error-logo img {
+            max-width: 200px;
+            margin-right: 40px;
+        }
+
+        .error-message {
+            text-align: left;
+            padding-left: 10px; /* Extra padding for alignment */
+        }
+
+        .error-message h1 {
+            font-size: 5em;
+            color: #0EAFFB;
+            margin-bottom: 10px;
+        }
+
+        .error-message h2 {
+            font-size: 2em;
+            font-family: 'Aldrich', sans-serif;
+            color: #F4F6F7;
+            margin-bottom: 10px;
+        }
+
+        .error-message p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #0EAFFB;
+            color: #060512;
+            border-radius: 5px;
+            font-size: 1em;
+            font-family: 'Aldrich', sans-serif;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #5AC8FA;
+            color: #1B1B1F;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .error-page {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .error-logo img {
+                margin: 0 auto 20px;
+            }
+
+            .error-message h1 {
+                font-size: 4em;
+            }
+
+            .error-message h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>    
+</head>
+
+<body>
+    <div class="error-page">
+        <div class="error-logo">
+            <img src="../assets/images/FullLogo_Transparent_NoBuffer.png" alt="TBH Digital Solutions Logo">
+        </div>
+        <div class="error-message">
+            <h1>404</h1>
+            <h2>Oops! Page Not Found</h2>
+            <p>We can't seem to find the page you're looking for.</p>
+            <p>It may have been moved or deleted.</p>
+            <a href="index.html" class="home-button">Go to Homepage</a>
+        </div>
+    </div>
+</body>
+</html>

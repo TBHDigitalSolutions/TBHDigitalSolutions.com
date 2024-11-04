@@ -4,7 +4,7 @@ CookieConsent.run({
     categories: {
         necessary: {
             enabled: true,
-            readOnly: true,  // Cannot be disabled by the user
+            readOnly: true,
             services: {
                 essential: {
                     label: 'Essential Cookies',
@@ -29,10 +29,11 @@ CookieConsent.run({
             }
         },
         performance: {
+            enabled: true,
             autoClear: {
                 cookies: [
-                    { name: /^_ga/ },  // Google Analytics ID
-                    { name: /^_gid/ }, // Google Analytics session tracking
+                    { name: /^_ga/ },
+                    { name: /^_gid/ },
                 ]
             },
             services: {
@@ -57,6 +58,7 @@ CookieConsent.run({
             }
         },
         analytics: {
+            enabled: true,
             services: {
                 analytics: {
                     label: 'Analytics Cookies',
@@ -79,6 +81,7 @@ CookieConsent.run({
             }
         },
         marketing: {
+            enabled: true,
             services: {
                 marketing: {
                     label: 'Marketing Cookies',
@@ -95,12 +98,37 @@ CookieConsent.run({
                             domain: "doubleclick.net",
                             desc: "Google Ads: Tracks ad interactions and measures ad performance.",
                             duration: "13 months"
+                        },
+                        {
+                            name: "_gcl_au",
+                            domain: "google.com",
+                            desc: "Google Ads: Used for conversion tracking and ad measurement.",
+                            duration: "3 months"
+                        },
+                        {
+                            name: "ANID",
+                            domain: "google.com",
+                            desc: "Google Ads: Persistent cookie used for advertising purposes.",
+                            duration: "2 years"
+                        },
+                        {
+                            name: "_rdt_uuid",
+                            domain: "reddit.com",
+                            desc: "Reddit: Used for tracking interactions and conversions from Reddit ads.",
+                            duration: "3 months"
+                        },
+                        {
+                            name: "personalization_id",
+                            domain: "twitter.com",
+                            desc: "Twitter: Tracks user interactions and customizes ad targeting on Twitter.",
+                            duration: "2 years"
                         }
                     ]
                 }
             }
         },
         social: {
+            enabled: true,
             services: {
                 social_media: {
                     label: 'Social Media Cookies',
@@ -117,6 +145,7 @@ CookieConsent.run({
             }
         },
         preferences: {
+            enabled: true,
             services: {
                 preferences: {
                     label: 'Preferences Cookies',
