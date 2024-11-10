@@ -1,0 +1,156 @@
+/* Base Styling */
+body.dark-theme {
+    font-family: 'Newsreader', serif;
+    background-color: #060512;
+    color: #f4f6f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: #060512;
+}
+
+.logo {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 2rem;
+    color: #0EAFFB;
+    margin-top: 20px;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1B1B1F;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Multi-Step Form */
+.multi-step-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+fieldset {
+    border: none;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+fieldset.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 5px;
+    background-color: #2D2D2F;
+    color: #f4f6f7;
+    border: 1px solid #4a4a4a;
+}
+
+label {
+    display: block;
+    margin: 20px 0 5px;
+    font-weight: bold;
+    color: #f4f6f7;
+}
+
+/* Button Styling */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Aldrich', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+button.next-step {
+    background-color: #0EAFFB;
+    color: #060512;
+}
+
+button.prev-step {
+    background-color: #2D2D2F;
+    color: #0EAFFB;
+}
+
+button[type="submit"] {
+    background-color: #0EAFFB;
+    color: #060512;
+}
+
+button:hover {
+    background-color: #5AC8FA;
+    color: #1B1B1F;
+}
+
+/* Consent */
+.consent {
+    margin-top: 20px;
+}
+
+.consent label {
+    color: #f4f6f7;
+    display: flex;
+    align-items: center;
+}
+
+.consent a {
+    color: #0EAFFB;
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background: #060512;
+    color: #c9ced1;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer nav a {
+    color: #0EAFFB;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

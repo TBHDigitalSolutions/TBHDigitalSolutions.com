@@ -1,32 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description"
+        content="TBH Digital Solutions - Transforming Businesses with Cutting-Edge Digital Solutions" />
+    <meta name="keywords"
+        content="TBH Digital Solutions, Web Development, Digital Marketing, CRM Integration, Content Creation" />
+    <meta name="author" content="TBH Digital Solutions" />
+
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="TBH Digital Solutions" />
+    <meta property="og:description" content="Transform the way you do business with powerful digital solutions." />
+    <meta property="og:image" content="https://tbhdigitalsolutions.com/images/og-image.jpg" />
+    <meta property="og:url" content="https://tbhdigitalsolutions.com" />
+
+    <!-- Twitter Card for better social sharing -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TBH Digital Solutions" />
+    <meta name="twitter:description" content="Transform the way you do business with powerful digital solutions." />
+    <meta name="twitter:image" content="https://tbhdigitalsolutions.com/images/twitter-image.jpg" />
+
+    <!-- SEO & Social Meta Tags -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Content-Security-Policy -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://apis.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://tbhdigitalsolutions.com https://storage.googleapis.com; media-src 'self' https://storage.googleapis.com;" />
+
+    <!-- Schema.org for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "TBH Digital Solutions",
+        "url": "https://tbhdigitalsolutions.com",
+        "description": "Transform the way you do business with powerful digital solutions.",
+        "author": {
+          "@type": "Organization",
+          "name": "TBH Digital Solutions"
+        }
+      }
+    </script>
+
     <title>TBH Digital Solutions</title>
-    
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" href="https://tbhdigitalsolutions.com/assets/favicon_io/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tbhdigitalsolutions.com/assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tbhdigitalsolutions.com/assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://tbhdigitalsolutions.com/assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="https://tbhdigitalsolutions.com/assets/favicon_io/site.webmanifest">
+
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+        
+    <!-- Preload Video and Images for Faster Content Display -->
+    <link rel="preload"
+        href="https://storage.googleapis.com/tbh-digital-solutions-content/tbh-digital-solutions-website-content/website-videos/website-hero_1.mp4"
+        as="video" type="video/mp4">
+    <link rel="preload"
+        href="https://storage.googleapis.com/tbh-digital-solutions-content/tbh-digital-solutions-website-content/website-videos/website-websites-1-1.mp4"
+        as="video" type="video/mp4">
+    <link rel="preload"
+        href="https://storage.googleapis.com/tbh-digital-solutions-content/tbh-digital-solutions-website-content/website-videos/website-video-and-content-1-1.mp4"
+        as="video" type="video/mp4">
+    <link rel="preload"
+        href="https://storage.googleapis.com/tbh-digital-solutions-content/tbh-digital-solutions-website-content/website-videos/website-marketing-crm-1-1.mp4"
+        as="video" type="video/mp4">
+    <link rel="preload" href="https://tbhdigitalsolutions.com/images/og-image.jpg" as="image" type="image/jpeg">
+    <link rel="preload" href="https://tbhdigitalsolutions.com/images/twitter-image.jpg" as="image" type="image/jpeg">
+
     <!-- CookieConsent CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0/dist/cookieconsent.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/home-styles.css">
-    <link rel="stylesheet" href="/form/css/form-styles.css"> <!-- Link to form styles -->
+    <link rel="stylesheet" href="/form/css/form-styles.css">
 
     <!-- JS -->
     <script src="js/home-scripts.js" defer></script>
-    
-    <!-- Ionicons Library for Icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ERVCHVTXK5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ERVCHVTXK5');
+    </script>
 </head>
 
 <body>
@@ -276,7 +347,7 @@
             <a href="/privacy-policy.html">PRIVACY POLICY</a> |
             <a href="/privacy-policy.html">HOW WE USE YOUR DATA</a> |
             <a href="/privacy-policy.html">DO NOT SELL MY PERSONAL INFORMATION</a> |
-            <a href="/terms.html">TERMS AND CONDITIONS</a> |
+            <a href="/terms-and-conditions.html">TERMS AND CONDITIONS</a> |
             <a href="https://tbhdigitalsolutions.com">BUILT BY TBH DIGITAL SOLUTIONS</a>
         </nav>
     </footer>
